@@ -4,7 +4,7 @@ import useInterval from "../utils/useInterval";
 import Duration from "./Duration.js";
 import PlayButton from "./PlayButton.js";
 import SessionDisplay from "./SessionDisplay.js";
-import secondsToDuration from "../utils/duration";
+import {secondsToDuration} from "../utils/duration";
 
 // These functions are defined outside of the component to ensure they do not have access to state
 // and are, therefore, more likely to be pure.
