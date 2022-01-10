@@ -6,17 +6,6 @@ import {secondsToDuration} from "../utils/duration";
 
 function SessionDisplay({session, focusDuration, breakDuration, isTimerRunning}) {
   
-//   function secondsToDuration(givenSeconds) {
-//     const minutes = Math.floor((givenSeconds % 3600) / 60)
-//       .toString()
-//       .padStart(2, "0");
-//     const seconds = Math.round(givenSeconds % 60)
-//       .toString()
-//       .padStart(2, "0");
-//     return `${minutes}:${seconds}`;
-//   }
-  
-  
     if (session) {
       return (
     <div>
@@ -53,7 +42,16 @@ function SessionDisplay({session, focusDuration, breakDuration, isTimerRunning})
                         : breakDuration * 60)) *
                       100
                   } // TODO: Increase aria-valuenow as elapsed time increases
-                style={{ width: "0%" }} // TODO: Increase width % as elapsed time increases
+                  style={{
+                    width: `${
+                      100 -
+                      (session.timeRemaining /
+                        (session.label === "Focusing"
+                          ? focusDuration * 60
+                          : breakDuration * 60)) *
+                        100
+                    }%`,
+                  }} // TODO: Increase width % as elapsed time increases
               />
             </div>
           </div>

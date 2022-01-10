@@ -60,6 +60,7 @@ function Duration({focusDuration, breakDuration, setFocusDuration, setBreakDurat
                 className="btn btn-secondary"
                 data-testid="decrease-focus"
                 onClick = {handleDecreaseFocus}
+                disabled={session?.timeRemaining ? true : false}
               >
                 <span className="oi oi-minus" />
               </button>
@@ -69,6 +70,7 @@ function Duration({focusDuration, breakDuration, setFocusDuration, setBreakDurat
                 className="btn btn-secondary"
                 data-testid="increase-focus"
                 onClick = {handleIncreaseFocus}
+                disabled={session?.timeRemaining ? true : false}
               >
                 <span className="oi oi-plus" />
               </button>
@@ -89,6 +91,7 @@ function Duration({focusDuration, breakDuration, setFocusDuration, setBreakDurat
                   className="btn btn-secondary"
                   data-testid="decrease-break"
                   onClick = {handleDecreaseBreak}
+                  disabled={session?.timeRemaining ? true : false}
                 >
                   <span className="oi oi-minus" />
                 </button>
@@ -98,6 +101,7 @@ function Duration({focusDuration, breakDuration, setFocusDuration, setBreakDurat
                   className="btn btn-secondary"
                   data-testid="increase-break"
                   onClick = {handleIncreaseBreak}
+                  disabled={session?.timeRemaining ? true : false}
                 >
                   <span className="oi oi-plus" />
                 </button>
