@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import classNames from "../utils/class-names";
-import useInterval from "../utils/useInterval";
-import minutesToDuration from "../utils/duration";
+import React from "react";
 
 function Duration({focusDuration, breakDuration, setFocusDuration, setBreakDuration, session}) {
   
@@ -50,11 +47,9 @@ function Duration({focusDuration, breakDuration, setFocusDuration, setBreakDurat
         <div className="col">
           <div className="input-group input-group-lg mb-2">
             <span className="input-group-text" data-testid="duration-focus">
-              {/* TODO: Update this text to display the current focus session duration */}
               Focus Duration: {("0" + focusDuration).substr(-2)}:00
             </span>
             <div className="input-group-append">
-              {/* TODO: Implement decreasing focus duration and disable during a focus or break session */}
               <button
                 type="button"
                 className="btn btn-secondary"
@@ -64,7 +59,6 @@ function Duration({focusDuration, breakDuration, setFocusDuration, setBreakDurat
               >
                 <span className="oi oi-minus" />
               </button>
-              {/* TODO: Implement increasing focus duration and disable during a focus or break session */}
               <button
                 type="button"
                 className="btn btn-secondary"
@@ -81,11 +75,9 @@ function Duration({focusDuration, breakDuration, setFocusDuration, setBreakDurat
           <div className="float-right">
             <div className="input-group input-group-lg mb-2">
               <span className="input-group-text" data-testid="duration-break">
-                {/* TODO: Update this text to display the current break session duration */}
                 Break Duration: {("0" + breakDuration).substr(-2)}:00
               </span>
               <div className="input-group-append">
-                {/* TODO: Implement decreasing break duration and disable during a focus or break session*/}
                 <button
                   type="button"
                   className="btn btn-secondary"
@@ -95,7 +87,6 @@ function Duration({focusDuration, breakDuration, setFocusDuration, setBreakDurat
                 >
                   <span className="oi oi-minus" />
                 </button>
-                {/* TODO: Implement increasing break duration and disable during a focus or break session*/}
                 <button
                   type="button"
                   className="btn btn-secondary"
